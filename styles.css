@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+
+header {
+    background-color: cornflowerblue;
+    color: azure;
+    padding: 20px;
+}
+
+section {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.gray {
+    background-color: lightgray
+}
