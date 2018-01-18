@@ -7,13 +7,41 @@ header {
     background-color: cornflowerblue;
     color: azure;
     padding: 20px;
+    border-radius: 15px 15px 0 0;
 }
 
 section {
     border: 2px solid black;
     padding: 10px;
+    border-radius: 0 0 15px 15px;
 }
 
 .gray {
-    background-color: lightgray
+    background-color: lightgray;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    background-color: rgb(53, 48, 48); 
+    padding: 14px 16px;
+    margin-bottom: 0;
+    margin-top: 0; 
+    display: flex;
+    justify-content: center;   
+}
+
+li {
+   display: inline;
+} 
+
+li a {
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+li a:hover {
+  background-color:darkgray;
 }
