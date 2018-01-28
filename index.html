@@ -52,11 +52,16 @@
     <div id="date"></div>
     <p>Here's the time</p>
     <div id="time"></div>
+    <button id="btn">Refresh</button>
     <script>
-        window.onload = function () {
+        var refresh = function() {
             var atime = moment();
             document.querySelector("#date").innerHTML = atime.format('MMMM DD, YYYY');
-            document.querySelector("#time").innerHTML = atime.format('h:MM a');
+            document.querySelector("#time").innerHTML = atime.format('hh:mm a');
+        }
+        window.onload = function () {
+            document.querySelector("#btn").onclick = refresh;
+            refresh();
         }
     </script>
 </body>
