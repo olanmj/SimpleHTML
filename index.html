@@ -4,6 +4,7 @@
 <head>
     <title>HTML Demo</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="moment.js"></script>
 </head>
 
 <body>
@@ -12,34 +13,26 @@
         <p>
             Styled with CSS3
         </p>
-        <a class="gray" href="https://www.w3schools.com" target="_blank">Go to w3schools</a>
+        <a class="gray" href="page2.html">Go to page 2</a>
     </header>
     <nav>
         <ul>
-            <li><a href="https://www.w3schools.com/tags/default.asp" target="_blank">HTML</a></li>
-            <li><a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">JavaScript</a></li>
-            <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/" target="_blank">C#</a></li>
+            <li>
+                <a href="https://www.w3schools.com/tags/default.asp" target="_blank">HTML</a>
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">JavaScript</a>
+            </li>
+            <li>
+                <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/" target="_blank">C#</a>
+            </li>
         </ul>
     </nav>
     <div>
-        <table>
-            <tr>
-              <th>Item</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
-            <tr>
-              <td>Item 1</td>
-              <td>5</td>
-              <td>1.99</td>
-            </tr>
-            <tr>
-              <td>Item 2</td>
-              <td>20</td>
-              <td>10.25</td>
-            </tr>
-          </table>
+
     </div>
     <section>
         <h1>Section 1</h1>
@@ -55,14 +48,15 @@
         </div>
     </section>
 
-    <section class="grid-container">
-        <div class="item1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus illum fugiat possimus a ullam voluptatibus molestiae optio inventore corrupti vitae ea laudantium iste non sed perspiciatis neque, aut necessitatibus reprehenderit.</div>
-        <div class="item2">Vitae eos qui ad, ex, nemo eligendi deserunt consequuntur officia at necessitatibus cum rerum tenetur, veritatis repellat in quae inventore similique! Quis fuga officiis amet suscipit a unde. Exercitationem, laudantium.</div>
-        <div class="item3">Amet recusandae quod ullam expedita voluptatum ut veritatis. Dolores repellendus optio labore deserunt cupiditate, sit facilis iste, obcaecati ipsum perferendis nulla temporibus libero neque facere commodi maiores, ex itaque sapiente!</div>
-        <div class="item4">Quae assumenda animi error a dolorem ipsum odio quis facere? Animi nostrum error, reiciendis commodi reprehenderit modi nemo natus. Iusto tempora voluptas harum eveniet, quo accusantium! Reprehenderit voluptatem quis laudantium!</div>
-        <div class="item5">Accusamus quae ullam iste exercitationem officia facilis saepe nulla voluptatibus repudiandae sunt, est magni dolor qui laboriosam libero? Pariatur at maiores esse ratione quae natus enim cum rerum voluptas ea.</div>
-    </section>
-      
+    <p>Here's the date:</p>
+    <div id="date"></div>
+    <p>Here's the time</p>
+    <div id="time"></div>
+    <script>
+        window.onload = function () {
+            var atime = moment();
+            document.querySelector("#date").innerHTML = atime.format('MMMM DD, YYYY');
+            document.querySelector("#time").innerHTML = atime.format('h:MM a');
+        }
+    </script>
 </body>
-
-</html>
